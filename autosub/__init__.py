@@ -156,7 +156,9 @@ class Translator(object): # pylint: disable=too-few-public-methods
     def __init__(self, language, api_key, src, dst):
         self.language = language
         self.api_key = api_key
-        #self.service = build('translate', 'v2',developerKey=self.api_key)self.src = src, self.dst = dst
+        #self.service = build('translate', 'v2',developerKey=self.api_key)
+        self.src = src
+        self.dst = dst
 
     def __call__(self, sentence):
         try:
